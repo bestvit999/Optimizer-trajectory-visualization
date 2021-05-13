@@ -13,14 +13,14 @@ for obj in objs:
     total_iter = 10000
     """ optimizers """
     opts = {
-        "SGD" : SGD(lr=.001),
-        "Momentum" : Momentum(lr=.001, momentum=0.9),
-        "Nesterov" : Nesterov(lr=.001, momentum=0.9),
-        "Adagrad" : AdaGrad(lr=.1),
-        "RMSprop" : RMSprop(lr=.1, decay_rate=0.99),
-        "Adam" : Adam(lr=.1, beta1=0.9, beta2=0.999),
-        "SA" : SA(lr=.01, obj_func=obj.obj_func),
-        "PSO" : PSO(lr=.01, params = init_pos, num_particle=10, obj_func=obj.obj_func),
+        # "SGD" : SGD(lr=.001),
+        # "Momentum" : Momentum(lr=.001, momentum=0.9),
+        # "Nesterov" : Nesterov(lr=.001, momentum=0.9),
+        # "Adagrad" : AdaGrad(lr=.1),
+        # "RMSprop" : RMSprop(lr=.1, decay_rate=0.99),
+        # "Adam" : Adam(lr=.1, beta1=0.9, beta2=0.999),
+        # "SA" : SA(lr=.01, obj_func=obj.obj_func),
+        # "PSO" : PSO(lr=.01, params = init_pos, num_particle=10, obj_func=obj.obj_func),
         "GLAdam" : GLAdam(lr=.01, params = init_pos, total_iter=total_iter, obj_func=obj.obj_func),
     }
 
